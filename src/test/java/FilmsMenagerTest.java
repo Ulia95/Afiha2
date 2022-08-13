@@ -17,15 +17,15 @@ public class FilmsMenagerTest {
         menager.addFilm("film9");
         menager.addFilm("film10");
 
-        String[] actual = menager.findLast(10);
-        String[] expected = {"film10", "film9", "film8", "film7", "film6","film5", "film4", "film3", "film2", "film1"};
+        String[] actual = menager.findLast();
+        String[] expected = {"film10", "film9", "film8", "film7", "film6", "film5", "film4", "film3", "film2", "film1"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void findLast() {
-        FilmsMenager menager = new FilmsMenager(10);
+        FilmsMenager menager = new FilmsMenager(6);
         menager.addFilm("film1");
         menager.addFilm("film2");
         menager.addFilm("film3");
@@ -37,15 +37,15 @@ public class FilmsMenagerTest {
         menager.addFilm("film9");
         menager.addFilm("film10");
 
-        String[] actual = menager.findLast(6);
-        String[] expected = {"film10", "film9", "film8", "film7", "film6","film5"};
+        String[] actual = menager.findLast();
+        String[] expected = {"film10", "film9", "film8", "film7", "film6", "film5"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void findLast2() {
-        FilmsMenager menager = new FilmsMenager(12);
+        FilmsMenager menager = new FilmsMenager(2);
         menager.addFilm("film1");
         menager.addFilm("film2");
         menager.addFilm("film3");
@@ -60,15 +60,11 @@ public class FilmsMenagerTest {
         menager.addFilm("film12");
 
 
-        String[] actual = menager.findLast(10);
-        String[] expected = {"film12", "film11", "film10", "film9", "film8","film7", "film6", "film5","film4", "film3"};
+        String[] actual = menager.findLast();
+        String[] expected = {"film12", "film11"};
         Assertions.assertArrayEquals(expected, actual);
     }
-
-
-
-
-    }
+}
 
 
 
